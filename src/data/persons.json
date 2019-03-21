@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Nataascha Anderson",
+    "case": "Divorce",
+    "email": "nataascha.anderson@gmail.com",
+    "phone": "+01/47 433 2140",
+    "source": "Internet Search",
+    "status": "Lead"
+  },
+  {
+    "id": 2,
+    "name": "Mark Adams",
+    "case": "Fraud",
+    "email": "mark.adams@gmail.com",
+    "phone": "",
+    "source": "Facebook",
+    "status": "Lead"
+  },
+  {
+    "id": 3,
+    "name": "Saddie Williams",
+    "case": "DUI",
+    "email": "williamslaw@gmail.com",
+    "phone": "+01/47 433 20140",
+    "source": "Refferal",
+    "status": "Lead"
+  }
+]
