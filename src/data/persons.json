@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/user.png",
+    "image": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/woman.png",
     "name": "Nataascha Anderson",
     "case": "Divorce",
     "email": "nataascha.anderson@gmail.com",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "img": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/user.png",
+    "image": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/man.png",
     "name": "Mark Adams",
     "case": "Fraud",
     "email": "mark.adams@gmail.com",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "img": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/user.png",
+    "image": "https://raw.githubusercontent.com/emanueljtc/rootstack-test/develop/public/images/woman.png",
     "name": "Saddie Williams",
     "case": "DUI",
     "email": "williamslaw@gmail.com",
