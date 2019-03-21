@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-// import './App.css';
+import '../styles/PersonsList.css';
 import PeopleData from '../data/persons.json'
 
 class PersonsList extends Component {
   render() {
     return (
-      <div className="List">
+      <div className="people-list">
         <h2>Lista de Personas</h2>
+          <table className="list">
+            <tr>
+              <th>LEAD</th>
+              <th>EMAIL</th>
+              <th>PHONE</th>
+              <th>SOURCE</th>
+              <th>STATUS</th>
+              <th>OPTIONS</th>
+            </tr>
         {PeopleData.map((peopleDetail, index) =>{
           return (
-            <div>
-              <table className="PeopleList">
-                <tr>
-                  <th>LEAD</th>
-                  <th>EMAIL</th>
-                  <th>PHONE</th>
-                  <th>SOURCE</th>
-                  <th>STATUS</th>
-                  <th>OPTIONS</th>
-                </tr>
                 <tr>
                   <td>{peopleDetail.name}<br />{peopleDetail.case}</td>
                   <td>{peopleDetail.email}</td>
@@ -27,10 +26,10 @@ class PersonsList extends Component {
                   <td>{peopleDetail.status}</td>
                   <td>...</td>
                 </tr>
-              </table>
-            </div>
+             
             )
         })}
+        </table>
       </div>
     );
   }
