@@ -1,0 +1,52 @@
+.people-list {
+    width: 100%;
+
+    .list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+
+        > span {
+            padding: 8px 4px;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .head {
+            background-color: #e4e3e3;
+            color: gray;
+            text-transform: uppercase;
+
+            &.lead-head {
+                text-align: left;
+                padding-left: 18px;
+            }
+        }
+
+        > .lead {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            text-align: center;
+
+            > .image-people {
+                width: 50px;
+                height: 50px;
+                padding-left: 10px;
+            }
+
+            >.info{
+
+              .name{
+                margin-top: 5px;
+                margin-bottom: 0;
+              }
+              .case{
+                text-decoration: none;
+                color: gray;
+              }
+            }
+        }
+    }
+}
