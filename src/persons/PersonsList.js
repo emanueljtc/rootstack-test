@@ -12,7 +12,7 @@ class PersonsList extends Component {
             <span className="data">Showing <strong className="number">20 <i className="fas fa-angle-down"></i></strong> out of 521 contacts</span>
           </div>
           <div className="search">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
             <input className="input-search" />
           </div>
           <div className="options-header">
@@ -24,7 +24,7 @@ class PersonsList extends Component {
             </div>
             <div className="content-button">
               <button className="btn-add">
-                <i class="fas fa-plus"></i>  
+                <i className="fas fa-plus"></i>  
                 Add Contact
               </button>
             </div>
@@ -40,10 +40,10 @@ class PersonsList extends Component {
               return (
                 <>
                   <span className="lead">
-                    <img className="image-people" src={personsDetail.image} />
+                    <img className="image-people" src={personsDetail.image} alt={personsDetail.id}/>
                     <div className="info">
                       <strong><p className="name">{personsDetail.name}</p></strong>
-                      <a href="#" className="case">Case: {personsDetail.case}</a>
+                      <a href="/" className="case">Case: {personsDetail.case}</a>
                     </div>
                   </span>
                   <span className="email"><strong>{personsDetail.email}</strong></span>
@@ -55,7 +55,7 @@ class PersonsList extends Component {
                     </strong>
                   </span>
                   <span className="status">
-                    <div class="select">
+                    <div className="select">
                       <div className="circle"></div>
                       <strong>{personsDetail.status}</strong>
                       <i className="fas fa-angle-down"></i>
@@ -73,10 +73,10 @@ class PersonsList extends Component {
             return (
               <div className="person">
                 <span className="lead">
-                  <img className="image-people" src={personsDetail.image} />
+                  <img className="image-people" src={personsDetail.image} alt={personsDetail.id}/>
                   <div className="info">
                     <strong><p className="name">{personsDetail.name}</p></strong>
-                    <a href="#" className="case">Case: {personsDetail.case}</a>
+                    <a href="/" className="case">Case: {personsDetail.case}</a>
                   </div>
                 </span>
                 <span className="email"><strong>{personsDetail.email}</strong></span>
@@ -88,14 +88,14 @@ class PersonsList extends Component {
                   </strong>
                 </span>
                 <span className="status">
-                  <div class="select">
+                  <div className="select">
                     <div className="circle"></div>
                     <strong>{personsDetail.status}</strong>
                     <i className="fas fa-angle-down"></i>
                   </div>
                   <div className="options">
                     ...
-                    </div>
+                  </div>
                 </span>
               </div>
             )
