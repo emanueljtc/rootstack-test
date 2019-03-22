@@ -5,7 +5,7 @@
     grid-template-columns: auto 2fr 1fr;
     margin-bottom: 1.25rem; }
     .persons-list > .header > .texts .title {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       text-align: left;
       margin-bottom: 0; }
     .persons-list > .header > .texts .data {
