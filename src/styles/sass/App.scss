@@ -1,0 +1,17 @@
+@import "_colors.scss";
+
+.App {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% auto;
+
+    > .content-menu {
+        background-color: $bg-light-white;
+        padding: 1.25rem;
+    }
+
+    > .content-list {
+        padding: 1.25rem;
+        background-color: $bg-light;
+    }
+}

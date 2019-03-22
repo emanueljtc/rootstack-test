@@ -6,7 +6,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PersonsList/>
+        <div className="content-menu">
+          <div className="Menu">
+              Home
+          </div>
+        </div>
+        <div className="content-list">
+          <PersonsList/>
+        </div>
       </div>
     );
   }

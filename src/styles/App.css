@@ -1,2 +1,12 @@
 .App {
-}
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% auto; }
+  .App > .content-menu {
+    background-color: #fff;
+    padding: 1.25rem; }
+  .App > .content-list {
+    padding: 1.25rem;
+    background-color: rgba(217, 217, 218, 0.38); }
+
+/*# sourceMappingURL=App.css.map */
