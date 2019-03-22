@@ -12,7 +12,8 @@ class PersonsList extends Component {
             <span className="data">Showing <strong className="number">20 <i className="fas fa-angle-down"></i></strong> out of 521 contacts</span>
           </div>
           <div className="search">
-            
+            <i class="fas fa-search"></i>
+            <input className="input-search" />
           </div>
           <div className="options-header">
           </div>

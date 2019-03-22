@@ -2,18 +2,30 @@
   width: 100%; }
   .persons-list > .header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto 2fr 1fr;
     margin-bottom: 20px; }
     .persons-list > .header > .texts .title {
       font-family: 'Roboto', sans-serif;
-      text-align: left; }
+      text-align: left;
+      margin-bottom: 0; }
     .persons-list > .header > .texts .data {
       text-align: left;
       color: gray; }
       .persons-list > .header > .texts .data .number {
         color: #067db1; }
     .persons-list > .header > .search {
-      background-color: beige; }
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      padding-bottom: 0; }
+      .persons-list > .header > .search .fas {
+        color: gray; }
+      .persons-list > .header > .search .input-search {
+        width: 80%;
+        height: 40px;
+        margin-left: 20px;
+        border: none;
+        background-color: #e0dada; }
     .persons-list > .header > .options-header {
       background-color: violet; }
   .persons-list > .list {
