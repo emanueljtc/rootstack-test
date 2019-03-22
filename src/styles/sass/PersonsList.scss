@@ -1,7 +1,27 @@
 .persons-list {
     width: 100%;
 
-    .list {
+    > .header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+
+        > .texts {
+          background-color: aquamarine;
+            > .title {
+                text-align: left;
+            }
+        }
+
+        > .search{
+          background-color: beige;
+        }
+
+        > .options-header{
+          background-color: violet;
+        }
+    }
+
+    > .list {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(5, auto);
@@ -9,9 +29,11 @@
         > span {
             padding: 8px 4px;
             color: #9a9999;
+            width: 100%;
+            height: 100%;
         }
 
-       > .head {
+        > .head {
             height: 40px;
             display: flex;
             align-items: center;
@@ -35,6 +57,7 @@
                 width: 50px;
                 height: 50px;
                 padding-left: 10px;
+                margin: auto;
             }
 
             > .info {
@@ -52,25 +75,31 @@
             }
         }
 
-        .email, .phone, .source, .status {
-            margin: auto;
-            margin-left: 0;
+        > .lead, .email, .phone, .source, .status {
+            height: 80px;
+            border-bottom: 1px solid gray;
+        }
+
+        > .email, .phone, .source, .status {
+            display: flex;
+            align-items: center;
         }
 
         > .email {
             color: #067db1;
         }
 
-       > .source {
+        > .source {
             display: grid;
             grid-template-columns: 1fr 5%;
+            text-align: left;
 
-            strong {
-                margin-right: 10px;
+            .fas {
+                margin-left: 10px;
             }
         }
 
-       > .status {
+        > .status {
             width: 100%;
             display: grid;
             grid-template-columns: 70% 20%;

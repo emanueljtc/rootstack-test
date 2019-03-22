@@ -6,6 +6,16 @@ class PersonsList extends Component {
   render() {
     return (
       <div className="persons-list">
+        <div className="header">
+          <div className="texts">
+            <h2 className="title">Leads</h2>
+          </div>
+          <div className="search">
+            
+          </div>
+          <div className="options-header">
+          </div>
+        </div>
           <div className="list">
             <span className="head lead-head"><strong>LEAD</strong></span>
             <span className="head"><strong>EMAIL</strong></span>
@@ -25,8 +35,10 @@ class PersonsList extends Component {
                   <span className="email"><strong>{personsDetail.email}</strong></span>
                   <span className="phone"><strong>{personsDetail.phone}</strong></span>
                   <span className="source">
-                  <strong>{personsDetail.source}</strong>
-                    <i className="fas fa-angle-down"></i>
+                    <strong>
+                      {personsDetail.source} 
+                      <i className="fas fa-angle-down"></i>
+                    </strong>
                   </span>
                   <span className="status">
                     <div class="select">
