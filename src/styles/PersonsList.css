@@ -2,7 +2,7 @@
   width: 100%; }
   .persons-list > .header {
     display: grid;
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     margin-bottom: 1.25rem; }
     .persons-list > .header > .texts .title {
       font-family: "Roboto", sans-serif;
@@ -80,7 +80,8 @@
         width: 3.125rem;
         height: 3.125rem;
         padding-left: 0.625rem;
-        margin: auto; }
+        margin: auto;
+        border-radius: 50%; }
       .persons-list > .list > .lead > .info {
         margin: auto; }
         .persons-list > .list > .lead > .info .name {
@@ -141,6 +142,8 @@
           display: grid;
           justify-content: center;
           text-align: center; }
+          .persons-list > .detail .person .lead .image-people {
+            border-radius: 50%; }
           .persons-list > .detail .person .lead .name {
             margin-bottom: 0; }
           .persons-list > .detail .person .lead .case {

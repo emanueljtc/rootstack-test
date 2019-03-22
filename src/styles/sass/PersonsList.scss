@@ -6,7 +6,7 @@
 
     > .header {
         display: grid;
-        grid-template-columns: auto 2fr 1fr;
+        grid-template-columns: auto 1fr 1fr;
         margin-bottom: 1.25rem;
 
         > .texts {
@@ -121,6 +121,7 @@
                 height: 3.125rem;
                 padding-left: 0.625rem;
                 margin: auto;
+                border-radius: 50%;
             }
 
             > .info {
@@ -219,6 +220,9 @@
                     justify-content: center;
                     text-align: center;
 
+                    .image-people{
+                        border-radius: 50%;
+                    }
                     .name {
                         margin-bottom: 0;
                     }
