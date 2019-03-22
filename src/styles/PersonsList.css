@@ -1,35 +1,69 @@
-.people-list {
+.persons-list {
   width: 100%; }
-  .people-list .list {
+  .persons-list .list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    border-top: 1px solid black;
-    border-right: 1px solid black; }
-    .people-list .list > span {
+    grid-template-columns: repeat(5, auto); }
+    .persons-list .list > span {
       padding: 8px 4px;
-      border-left: 1px solid black;
-      border-bottom: 1px solid black; }
-    .people-list .list .head {
+      color: #9a9999; }
+    .persons-list .list > .head {
+      height: 40px;
+      display: flex;
+      align-items: center;
       background-color: #e4e3e3;
       color: gray;
       text-transform: uppercase; }
-      .people-list .list .head.lead-head {
+      .persons-list .list > .head.lead-head {
         text-align: left;
         padding-left: 18px; }
-    .people-list .list > .lead {
+    .persons-list .list > .lead {
       display: grid;
       grid-template-columns: auto 1fr;
-      text-align: center; }
-      .people-list .list > .lead > .image-people {
+      text-align: center;
+      color: black; }
+      .persons-list .list > .lead > .image-people {
         width: 50px;
         height: 50px;
         padding-left: 10px; }
-      .people-list .list > .lead > .info .name {
-        margin-top: 5px;
-        margin-bottom: 0; }
-      .people-list .list > .lead > .info .case {
-        text-decoration: none;
-        color: gray; }
+      .persons-list .list > .lead > .info {
+        margin: auto; }
+        .persons-list .list > .lead > .info .name {
+          margin-top: 5px;
+          margin-bottom: 0; }
+        .persons-list .list > .lead > .info .case {
+          text-decoration: none;
+          color: gray; }
+    .persons-list .list .email, .persons-list .list .phone, .persons-list .list .source, .persons-list .list .status {
+      margin: auto;
+      margin-left: 0; }
+    .persons-list .list > .email {
+      color: #067db1; }
+    .persons-list .list > .source {
+      display: grid;
+      grid-template-columns: 1fr 5%; }
+      .persons-list .list > .source strong {
+        margin-right: 10px; }
+    .persons-list .list > .status {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 70% 20%; }
+      .persons-list .list > .status > .select {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-radius: 20px;
+        border: 1px solid gray;
+        padding: 10px; }
+        .persons-list .list > .status > .select > .circle {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid black;
+          background-color: green; }
+        .persons-list .list > .status > .select .fa-angle-down {
+          margin-left: 12px; }
+      .persons-list .list > .status > .options {
+        font-size: 30px; }
 
 /*# sourceMappingURL=PersonsList.css.map */

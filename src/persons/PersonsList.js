@@ -1,33 +1,43 @@
 import React, { Component } from 'react';
 import '../styles/PersonsList.css';
-import PeopleData from '../data/persons.json'
+import PersonsData from '../data/persons.json'
 
 class PersonsList extends Component {
   render() {
     return (
-      <div className="people-list">
+      <div className="persons-list">
           <div className="list">
             <span className="head lead-head"><strong>LEAD</strong></span>
             <span className="head"><strong>EMAIL</strong></span>
             <span className="head"><strong>PHONE</strong></span>
             <span className="head"><strong>SOURCE</strong></span>
             <span className="head"><strong></strong></span>
-            <span className="head"><strong></strong></span>
-            {PeopleData.map((peopleDetail, index) =>{
+            {PersonsData.map((personsDetail, index) =>{
               return (
                 <>
                   <span className="lead">
-                    <img className="image-people" src={peopleDetail.img} />
-                    <div class="info">
-                      <strong><p className="name">{peopleDetail.name}</p></strong>
-                      <a href="#" className="case">Case: {peopleDetail.case}</a>
+                    <img className="image-people" src={personsDetail.image} />
+                    <div className="info">
+                      <strong><p className="name">{personsDetail.name}</p></strong>
+                      <a href="#" className="case">Case: {personsDetail.case}</a>
                     </div>
                   </span>
-                  <span><strong>{peopleDetail.email}</strong></span>
-                  <span><strong>{peopleDetail.phone}</strong></span>
-                  <span><strong>{peopleDetail.source}</strong></span>
-                  <span><strong>{peopleDetail.status}</strong></span>
-                  <span>...</span>
+                  <span className="email"><strong>{personsDetail.email}</strong></span>
+                  <span className="phone"><strong>{personsDetail.phone}</strong></span>
+                  <span className="source">
+                  <strong>{personsDetail.source}</strong>
+                    <i className="fas fa-angle-down"></i>
+                  </span>
+                  <span className="status">
+                    <div class="select">
+                      <div className="circle"></div>
+                      <strong>{personsDetail.status}</strong>
+                      <i className="fas fa-angle-down"></i>
+                    </div>
+                    <div className="options">
+                      ...
+                    </div>
+                  </span>
                 </>
                 )
             })}
