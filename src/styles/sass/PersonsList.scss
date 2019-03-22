@@ -4,20 +4,30 @@
     > .header {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        margin-bottom: 20px;
 
         > .texts {
-          background-color: aquamarine;
-            > .title {
+            .title {
+                font-family: 'Roboto', sans-serif;
                 text-align: left;
+            }
+
+            .data {
+                text-align: left;
+                color: gray;
+
+                .number {
+                    color: #067db1;
+                }
             }
         }
 
-        > .search{
-          background-color: beige;
+        > .search {
+            background-color: beige;
         }
 
-        > .options-header{
-          background-color: violet;
+        > .options-header {
+            background-color: violet;
         }
     }
 

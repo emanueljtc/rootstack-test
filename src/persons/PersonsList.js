@@ -9,6 +9,7 @@ class PersonsList extends Component {
         <div className="header">
           <div className="texts">
             <h2 className="title">Leads</h2>
+            <span className="data">Showing <strong className="number">20 <i className="fas fa-angle-down"></i></strong> out of 521 contacts</span>
           </div>
           <div className="search">
             

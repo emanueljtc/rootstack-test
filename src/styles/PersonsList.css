@@ -2,11 +2,16 @@
   width: 100%; }
   .persons-list > .header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; }
-    .persons-list > .header > .texts {
-      background-color: aquamarine; }
-      .persons-list > .header > .texts > .title {
-        text-align: left; }
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-bottom: 20px; }
+    .persons-list > .header > .texts .title {
+      font-family: 'Roboto', sans-serif;
+      text-align: left; }
+    .persons-list > .header > .texts .data {
+      text-align: left;
+      color: gray; }
+      .persons-list > .header > .texts .data .number {
+        color: #067db1; }
     .persons-list > .header > .search {
       background-color: beige; }
     .persons-list > .header > .options-header {
