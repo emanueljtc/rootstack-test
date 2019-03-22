@@ -4,7 +4,8 @@
   grid-template-columns: 20% auto; }
   .App > .content-menu {
     background-color: #fff;
-    padding: 1.25rem; }
+    padding: 1.25rem;
+    padding-left: 0; }
   .App > .content-list {
     padding: 1.25rem;
     background-color: rgba(217, 217, 218, 0.38); }
