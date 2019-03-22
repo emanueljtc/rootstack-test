@@ -27,7 +27,30 @@
         border: none;
         background-color: #e0dada; }
     .persons-list > .header > .options-header {
-      background-color: violet; }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center; }
+      .persons-list > .header > .options-header > .type, .persons-list > .header > .options-header .source {
+        color: gray;
+        margin: auto; }
+      .persons-list > .header > .options-header > .content-button {
+        margin: auto; }
+        .persons-list > .header > .options-header > .content-button .btn-add {
+          background-color: #067db1;
+          border: none;
+          border-radius: 20px;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+          font-size: 12px;
+          font-weight: bold; }
+          .persons-list > .header > .options-header > .content-button .btn-add:hover {
+            background-color: #03a8ee; }
+          .persons-list > .header > .options-header > .content-button .btn-add .fas {
+            margin-right: 2px; }
   .persons-list > .list {
     width: 100%;
     display: grid;
@@ -100,5 +123,58 @@
           margin-left: 12px; }
       .persons-list > .list > .status > .options {
         font-size: 30px; }
+  .persons-list > .detail {
+    display: none; }
+  @media (max-width: 900px) {
+    .persons-list > .list {
+      display: none; }
+    .persons-list > .detail {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .persons-list > .detail .person {
+        display: grid;
+        grid-template-rows: auto;
+        grid-row-gap: 10px;
+        margin-bottom: 20px; }
+        .persons-list > .detail .person .lead {
+          display: grid;
+          justify-content: center;
+          text-align: center; }
+          .persons-list > .detail .person .lead .name {
+            margin-bottom: 0; }
+          .persons-list > .detail .person .lead .case {
+            text-decoration: none;
+            color: gray; }
+        .persons-list > .detail .person .email, .persons-list > .detail .person .phone, .persons-list > .detail .person .source, .persons-list > .detail .person .status, .persons-list > .detail .person .options {
+          text-align: center; }
+        .persons-list > .detail .person .email {
+          color: #067db1; }
+        .persons-list > .detail .person .phone, .persons-list > .detail .person .source, .persons-list > .detail .person .status, .persons-list > .detail .person .options {
+          color: gray; }
+        .persons-list > .detail .person .status {
+          margin: auto; }
+          .persons-list > .detail .person .status > .select {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-radius: 20px;
+            border: 1px solid gray;
+            padding: 10px; }
+            .persons-list > .detail .person .status > .select > .circle {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 1px solid black;
+              background-color: green; }
+        .persons-list > .detail .person .fas {
+          margin-left: 5px; } }
+  @media (max-width: 600px) {
+    .persons-list > .header {
+      grid-template-columns: repeat(2, 1fr); }
+      .persons-list > .header .options-header {
+        grid-template-columns: repeat(3, auto);
+        grid-column: 1 / -1; }
+    .persons-list > .detail {
+      grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=PersonsList.css.map */
