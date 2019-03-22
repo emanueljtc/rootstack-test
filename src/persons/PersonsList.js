@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import '../styles/PersonsList.css';
 import PersonsData from '../data/persons.json'
-
+import { Modal, Button } from 'react-bootstrap';
 class PersonsList extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.ModalShow = this.ModalShow.bind(this);
+    this.ModalClose = this.ModalClose.bind(this);
+
+    this.state = {
+      show: false,
+    };
+  }
+
+  ModalClose() {
+    this.setState({ show: false });
+  }
+
+  ModalShow() {
+    this.setState({ show: true });
+  }
   render() {
     return (
       <div className="persons-list">
@@ -23,14 +41,14 @@ class PersonsList extends Component {
               <span className="text">Source <i className="fas fa-angle-down"></i></span>
             </div>
             <div className="content-button">
-              <button className="btn-add">
+              <button className="btn-add" onClick={this.ModalShow}>
                 <i className="fas fa-plus"></i>  
                 Add Contact
               </button>
             </div>
           </div>
         </div>
-          <div className="list">
+        <div className="list">
             <span className="head lead-head"><strong>LEAD</strong></span>
             <span className="head"><strong>EMAIL</strong></span>
             <span className="head"><strong>PHONE</strong></span>
@@ -101,7 +119,25 @@ class PersonsList extends Component {
             )
           })}
         </div>
+        
+        <Modal show={this.state.show} onHide={this.ModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Name
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.ModalClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={this.ModalClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
         </div>
+
     );
   }
 }
