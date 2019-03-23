@@ -6,7 +6,45 @@
     background-color: #fff;
     padding: 1.25rem;
     padding-left: 0; }
-  .App > .content-list {
+  .App > .content-main .bar-header {
+    width: 100%;
+    height: 4.375rem;
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns: auto 1fr auto; }
+    @media (max-width: 600px) {
+      .App > .content-main .bar-header {
+        grid-template-columns: repeat(3, 1fr); } }
+    .App > .content-main .bar-header .icon-search,
+    .App > .content-main .bar-header .icon-center,
+    .App > .content-main .bar-header .info {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem;
+      color: #808080; }
+      .App > .content-main .bar-header .icon-search.icon-center,
+      .App > .content-main .bar-header .icon-center.icon-center,
+      .App > .content-main .bar-header .info.icon-center {
+        justify-content: center; }
+      .App > .content-main .bar-header .icon-search.info .fa-envelope-open-text,
+      .App > .content-main .bar-header .icon-center.info .fa-envelope-open-text,
+      .App > .content-main .bar-header .info.info .fa-envelope-open-text {
+        margin-right: 0.625rem; }
+      .App > .content-main .bar-header .icon-search.info .text,
+      .App > .content-main .bar-header .icon-center.info .text,
+      .App > .content-main .bar-header .info.info .text {
+        color: #000; }
+        @media (max-width: 600px) {
+          .App > .content-main .bar-header .icon-search.info .text strong,
+          .App > .content-main .bar-header .icon-center.info .text strong,
+          .App > .content-main .bar-header .info.info .text strong {
+            display: none; } }
+      .App > .content-main .bar-header .icon-search.info .fa-angle-down,
+      .App > .content-main .bar-header .icon-center.info .fa-angle-down,
+      .App > .content-main .bar-header .info.info .fa-angle-down {
+        color: #808080;
+        margin-left: 0.625rem; }
+  .App > .content-main .content-list {
     padding: 1.25rem;
     background-color: rgba(217, 217, 218, 0.38); }
 

@@ -20,13 +20,6 @@
       padding-bottom: 0; }
       .persons-list > .header > .search .fas {
         color: #808080; }
-      .persons-list > .header > .search .input-search {
-        width: 80%;
-        height: 2.5rem;
-        margin-left: 1.25rem;
-        border: none;
-        background-color: #e0dada;
-        padding-left: 0.625rem; }
     .persons-list > .header > .options-header {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -52,6 +45,9 @@
             background-color: #03a8ee; }
           .persons-list > .header > .options-header > .content-button .btn-add .fas {
             margin-right: 0.125rem; }
+          @media (max-width: 600px) {
+            .persons-list > .header > .options-header > .content-button .btn-add .text > .contact {
+              display: none; } }
   .persons-list > .list {
     width: 100%;
     display: grid;
@@ -122,8 +118,6 @@
           background-color: #008000; }
         .persons-list > .list > .status > .select .fa-angle-down {
           margin-left: 0.75rem; }
-      .persons-list > .list > .status > .options {
-        font-size: 1.875rem; }
   .persons-list .btn-delete {
     border: none;
     background: none;

@@ -10,8 +10,25 @@ class App extends Component {
         <div className="content-menu">
           <Menu/>
         </div>
-        <div className="content-list">
-          <PersonsList/>
+        <div className="content-main">
+          <div className="bar-header">
+            <section className="icon-search">
+              <i className="fas fa-search"></i>
+            </section>
+            <section className="icon-center">
+              <i className="fab fa-docker"></i>
+            </section>
+            <section className="info">
+              <i className="fas fa-envelope-open-text"></i>
+              <span className="text">
+                <strong>Hello, Shaun Clark</strong>
+                <i className="fas fa-angle-down"></i>
+              </span>
+            </section>
+          </div>
+          <div className="content-list">
+            <PersonsList/>
+          </div>
         </div>
       </div>
     );

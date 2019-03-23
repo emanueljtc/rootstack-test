@@ -8,7 +8,7 @@ class Menu extends Component {
         <div className="sidebar-menu">
           <ul className="ul-content">
             <li className="header-menu">
-              <i className="fas fa-bars"></i>
+              <i className="fas fa-align-right"></i>
             </li>
             <li className="sidebar-dropdown">
               <a href="#">

@@ -36,14 +36,7 @@
                 color: $text-light-gray;
             }
 
-            .input-search {
-                width: 80%;
-                height: 2.5rem;
-                margin-left: 1.25rem;
-                border: none;
-                background-color: $input-background;
-                padding-left: 0.625rem;
-            }
+            
         }
 
         > .options-header {
@@ -79,6 +72,13 @@
                     .fas {
                         margin-right: 0.125rem;
                     }
+                    
+                    @media (max-width: 600px){
+                        .text > .contact{
+                            display: none;
+                        }
+                    }
+
                 }
             }
         }

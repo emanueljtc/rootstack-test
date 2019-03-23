@@ -10,7 +10,7 @@ class PersonsList extends Component {
     this.ModalCloseAdd = this.ModalCloseAdd.bind(this);
     this.ModalShowDelete = this.ModalShowDelete.bind(this);
     this.ModalCloseDelete = this.ModalCloseDelete.bind(this);
-
+    
     this.state = {
       show: false,
       showDelete: false
@@ -41,8 +41,7 @@ class PersonsList extends Component {
             <span className="data">Showing <strong className="number">20 <i className="fas fa-angle-down"></i></strong> out of 521 contacts</span>
           </div>
           <div className="search">
-            <i className="fas fa-search"></i>
-            <input className="input-search" />
+            <i className="fas fa-search" ></i>
           </div>
           <div className="options-header">
             <div className="type">
@@ -54,7 +53,7 @@ class PersonsList extends Component {
             <div className="content-button">
               <button className="btn-add" onClick={this.ModalShowAdd}>
                 <i className="fas fa-plus"></i>  
-                Add Contact
+                <span className="text">Add <span className="contact">Contact</span></span>
               </button>
             </div>
           </div>
