@@ -90,7 +90,9 @@ class PersonsList extends Component {
                       <i className="fas fa-angle-down"></i>
                     </div>
                     <div className="options">
-                      <button className="btn-delete" onClick={this.ModalShowDelete}>...</button>
+                      <button className="btn-delete" onClick={this.ModalShowDelete}>
+                        <i className="fas fa-ellipsis-h"></i>
+                      </button>
                     </div>
                   </span>
                 </>
@@ -123,7 +125,9 @@ class PersonsList extends Component {
                     <i className="fas fa-angle-down"></i>
                   </div>
                   <div className="options">
-                    <button className="btn-delete" onClick={this.ModalShowDelete}>...</button>
+                    <button className="btn-delete" onClick={this.ModalShowDelete}>
+                      <i className="fas fa-ellipsis-h"></i>
+                    </button>
                   </div>
                 </span>
               </div>
