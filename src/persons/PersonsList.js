@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/PersonsList.css';
 import PersonsData from '../data/persons.json'
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Form, Col } from 'react-bootstrap';
 class PersonsList extends Component {
   constructor(props, context) {
     super(props, context);
@@ -122,17 +122,67 @@ class PersonsList extends Component {
         
         <Modal show={this.state.show} onHide={this.ModalClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Add New Contact</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Name
+            <Form>
+              <Form.Row>
+                <Form.Group as={Col} controlId="formGridFullName">
+                  <Form.Label>Full Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Full Name" />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" />
+                </Form.Group>
+              </Form.Row>
+
+              <Form.Group controlId="formGridPhone">
+                <Form.Label>Phone</Form.Label>
+                <Form.Control type="text" placeholder="Enter Phone" />
+              </Form.Group>
+
+              <Form.Row>
+                <Form.Group as={Col} controlId="formGridSource">
+                  <Form.Label>Source</Form.Label>
+                  <Form.Control as="select">
+                    <option>Choose...</option>
+                    <option>Internet Search</option>
+                    <option>Facebook</option>
+                    <option>Refferal</option>
+                  </Form.Control>
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridStatus">
+                  <Form.Label>Status</Form.Label>
+                  <Form.Control as="select">
+                    <option>Choose...</option>
+                    <option>Lead</option>
+                  </Form.Control>
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridCase">
+                  <Form.Label>Case</Form.Label>
+                  <Form.Control as="select">
+                    <option>Choose...</option>
+                    <option>Asault</option>
+                    <option>Divorce</option>
+                    <option>DUI</option>
+                    <option>Fraud</option>
+                    <option>Tax Evasion</option>
+                  </Form.Control>
+                </Form.Group>
+              </Form.Row>
+              
+              <Button variant="primary" type="submit">
+                Save
+              </Button>
+            </Form>;
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.ModalClose}>
               Close
-            </Button>
-            <Button variant="primary" onClick={this.ModalClose}>
-              Save Changes
             </Button>
           </Modal.Footer>
         </Modal>
