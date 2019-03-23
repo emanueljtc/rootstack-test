@@ -124,6 +124,13 @@
           margin-left: 0.75rem; }
       .persons-list > .list > .status > .options {
         font-size: 1.875rem; }
+        .persons-list > .list > .status > .options .btn-delete {
+          border: none;
+          background: none;
+          color: #808080; }
+          .persons-list > .list > .status > .options .btn-delete:hover {
+            color: #067db1;
+            font-size: 1.25rem; }
   .persons-list > .detail {
     display: none; }
   @media (max-width: 900px) {

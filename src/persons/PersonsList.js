@@ -6,20 +6,31 @@ class PersonsList extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.ModalShow = this.ModalShow.bind(this);
-    this.ModalClose = this.ModalClose.bind(this);
+    this.ModalShowAdd = this.ModalShowAdd.bind(this);
+    this.ModalCloseAdd = this.ModalCloseAdd.bind(this);
+    this.ModalShowDelete = this.ModalShowDelete.bind(this);
+    this.ModalCloseDelete = this.ModalCloseDelete.bind(this);
 
     this.state = {
       show: false,
+      showDelete: false
     };
   }
 
-  ModalClose() {
+  ModalCloseAdd() {
     this.setState({ show: false });
   }
 
-  ModalShow() {
+  ModalShowAdd() {
     this.setState({ show: true });
+  }
+
+  ModalShowDelete(){
+    this.setState({ showDelete: true})
+  }
+
+  ModalCloseDelete() {
+    this.setState({ showDelete: false })
   }
   render() {
     return (
@@ -41,7 +52,7 @@ class PersonsList extends Component {
               <span className="text">Source <i className="fas fa-angle-down"></i></span>
             </div>
             <div className="content-button">
-              <button className="btn-add" onClick={this.ModalShow}>
+              <button className="btn-add" onClick={this.ModalShowAdd}>
                 <i className="fas fa-plus"></i>  
                 Add Contact
               </button>
@@ -79,7 +90,7 @@ class PersonsList extends Component {
                       <i className="fas fa-angle-down"></i>
                     </div>
                     <div className="options">
-                      ...
+                      <button className="btn-delete" onClick={this.ModalShowDelete}>...</button>
                     </div>
                   </span>
                 </>
@@ -112,80 +123,99 @@ class PersonsList extends Component {
                     <i className="fas fa-angle-down"></i>
                   </div>
                   <div className="options">
-                    ...
+                    <button>...</button>
                   </div>
                 </span>
               </div>
             )
           })}
         </div>
-        
-        <Modal show={this.state.show} onHide={this.ModalClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Add New Contact</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form>
-              <Form.Row>
-                <Form.Group as={Col} controlId="formGridFullName">
-                  <Form.Label>Full Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Full Name" />
+
+          {/* Modal Add */}
+          <Modal show={this.state.show} onHide={this.ModalCloseAdd}>
+            <Modal.Header closeButton>
+              <Modal.Title>Add New Contact</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Row>
+                  <Form.Group as={Col} controlId="formGridFullName">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Full Name" />
+                  </Form.Group>
+
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" />
+                  </Form.Group>
+                </Form.Row>
+
+                <Form.Group controlId="formGridPhone">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Phone" />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-              </Form.Row>
+                <Form.Row>
+                  <Form.Group as={Col} controlId="formGridSource">
+                    <Form.Label>Source</Form.Label>
+                    <Form.Control as="select">
+                      <option>Choose...</option>
+                      <option>Internet Search</option>
+                      <option>Facebook</option>
+                      <option>Refferal</option>
+                    </Form.Control>
+                  </Form.Group>
 
-              <Form.Group controlId="formGridPhone">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control type="text" placeholder="Enter Phone" />
-              </Form.Group>
+                  <Form.Group as={Col} controlId="formGridStatus">
+                    <Form.Label>Status</Form.Label>
+                    <Form.Control as="select">
+                      <option>Choose...</option>
+                      <option>Lead</option>
+                    </Form.Control>
+                  </Form.Group>
 
-              <Form.Row>
-                <Form.Group as={Col} controlId="formGridSource">
-                  <Form.Label>Source</Form.Label>
-                  <Form.Control as="select">
-                    <option>Choose...</option>
-                    <option>Internet Search</option>
-                    <option>Facebook</option>
-                    <option>Refferal</option>
-                  </Form.Control>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridStatus">
-                  <Form.Label>Status</Form.Label>
-                  <Form.Control as="select">
-                    <option>Choose...</option>
-                    <option>Lead</option>
-                  </Form.Control>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridCase">
-                  <Form.Label>Case</Form.Label>
-                  <Form.Control as="select">
-                    <option>Choose...</option>
-                    <option>Asault</option>
-                    <option>Divorce</option>
-                    <option>DUI</option>
-                    <option>Fraud</option>
-                    <option>Tax Evasion</option>
-                  </Form.Control>
-                </Form.Group>
-              </Form.Row>
-              
-              <Button variant="primary" type="submit">
-                Save
+                  <Form.Group as={Col} controlId="formGridCase">
+                    <Form.Label>Case</Form.Label>
+                    <Form.Control as="select">
+                      <option>Choose...</option>
+                      <option>Asault</option>
+                      <option>Divorce</option>
+                      <option>DUI</option>
+                      <option>Fraud</option>
+                      <option>Tax Evasion</option>
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
+                
+                <Button variant="primary" type="submit">
+                  Save
+                </Button>
+              </Form>;
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.ModalCloseAdd}>
+                Close
               </Button>
-            </Form>;
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.ModalClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+            </Modal.Footer>
+          </Modal>
+
+          {/* Modal Delete */}
+          <Modal show={this.state.showDelete} onHide={this.ModalCloseDelete}>
+            <Modal.Header closeButton>
+              <Modal.Title>Delete</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              ¿Desea Eliminar?
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.ModalCloseDelete}>
+                Close
+              </Button>
+              <Button variant="danger" onClick={this.ModalCloseDelete}>
+                Delete
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
 
     );

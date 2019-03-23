@@ -190,6 +190,17 @@
 
             > .options {
                 font-size: 1.875rem;
+
+                .btn-delete{
+                   border: none;
+                   background: none;
+                   color: $text-light-gray;
+
+                   &:hover{
+                       color: $text-light-blue;
+                       font-size: 1.25rem;
+                   }
+                }
             }
         }
     }
