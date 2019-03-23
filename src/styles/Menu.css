@@ -31,5 +31,8 @@
       .Menu .sidebar-menu .ul-content .sidebar-dropdown span {
         font-weight: bold;
         color: #808080; }
+  @media (max-width: 600px) {
+    .Menu .sidebar-menu .ul-content .sidebar-dropdown span {
+      display: none; } }
 
 /*# sourceMappingURL=Menu.css.map */

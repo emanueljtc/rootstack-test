@@ -35,6 +35,8 @@
 
                     span {
                         color: $text-dark;
+
+                        
                     }
                 }
 
@@ -54,5 +56,11 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 600px){
+      .sidebar-menu .ul-content .sidebar-dropdown span{
+        display: none;
+      }
     }
 }
