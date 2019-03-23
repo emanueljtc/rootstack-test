@@ -124,13 +124,13 @@
           margin-left: 0.75rem; }
       .persons-list > .list > .status > .options {
         font-size: 1.875rem; }
-        .persons-list > .list > .status > .options .btn-delete {
-          border: none;
-          background: none;
-          color: #808080; }
-          .persons-list > .list > .status > .options .btn-delete:hover {
-            color: #067db1;
-            font-size: 1.25rem; }
+  .persons-list .btn-delete {
+    border: none;
+    background: none;
+    color: #808080; }
+    .persons-list .btn-delete:hover {
+      color: #067db1;
+      font-size: 1.25rem; }
   .persons-list > .detail {
     display: none; }
   @media (max-width: 900px) {
@@ -164,7 +164,7 @@
         .persons-list > .detail .person .status {
           margin: auto; }
           .persons-list > .detail .person .status > .select {
-            width: 70%;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             border-radius: 1.25rem;
