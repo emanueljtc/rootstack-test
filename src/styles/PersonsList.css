@@ -22,11 +22,13 @@
         color: #808080; }
     .persons-list > .header > .options-header {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr auto;
       align-items: center; }
       .persons-list > .header > .options-header > .type, .persons-list > .header > .options-header .source {
         color: #808080;
         margin: auto; }
+        .persons-list > .header > .options-header > .type.type, .persons-list > .header > .options-header .source.type {
+          margin-right: 0; }
       .persons-list > .header > .options-header > .content-button {
         margin: auto; }
         .persons-list > .header > .options-header > .content-button .btn-add {

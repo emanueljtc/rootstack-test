@@ -41,12 +41,16 @@
 
         > .options-header {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr auto;
             align-items: center;
 
             > .type, .source {
                 color: $text-light-gray;
                 margin: auto;
+                
+                &.type{
+                    margin-right: 0;
+                }
             }
 
             > .content-button {
