@@ -65,8 +65,7 @@
       color: #808080;
       text-transform: uppercase; }
       .persons-list > .list > .head.lead-head {
-        text-align: left;
-        padding-left: 10.5rem; }
+        text-align: left; }
     .persons-list > .list > .lead {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -104,12 +103,13 @@
       display: grid;
       grid-template-columns: 70% 20%; }
       .persons-list > .list > .status > .select {
-        width: 70%;
+        width: 90%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         border-radius: 1.25rem;
         border: 0.0625rem solid #808080;
-        padding: 0.625rem; }
+        padding: 0.625rem;
+        align-items: center; }
         .persons-list > .list > .status > .select > .circle {
           width: 1.25rem;
           height: 1.25rem;
@@ -163,7 +163,8 @@
             grid-template-columns: repeat(3, 1fr);
             border-radius: 1.25rem;
             border: 0.0625rem solid #808080;
-            padding: 0.625rem; }
+            padding: 0.625rem;
+            align-items: center; }
             .persons-list > .detail .person .status > .select > .circle {
               width: 1.25rem;
               height: 1.25rem;
